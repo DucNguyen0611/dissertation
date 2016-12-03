@@ -80,6 +80,15 @@ public class ItemDetailFragment extends Fragment {
             }
         });
 
+        Button addGoods = (Button) rootView.findViewById(R.id.btnAdd);
+        addGoods.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Dialog_NH_Fragment fragment = new Dialog_NH_Fragment();
+                getFragmentManager().beginTransaction().add(R.id.dialog_nh, fragment).commit();
+            }
+        });
+
         return rootView;
     }
 }
